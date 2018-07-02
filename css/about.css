@@ -1,0 +1,40 @@
+#aboutSection {
+    margin-top: 5%;
+    text-align: center;
+    background: #EDFAFD;
+    color: black;
+    font-family: 'Metrophobic', sans-serif;
+}
+
+.aboutHeader {
+    font-size: 60px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+   
+}
+
+.aboutText {
+    font-size: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 1%;
+    line-height: 30px;
+    padding-bottom: 10%;
+}
+
+.profilePic {
+    height: 250px;
+    width: 250px;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+.aboutHeader {
+    padding-top: 10%;
+}
+
+}

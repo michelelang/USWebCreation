@@ -1,0 +1,358 @@
+html, body {
+    font-family: 'Metrophobic', sans-serif;
+    padding-top: 0;
+  }
+
+
+
+
+.grid-container1 {
+    display: grid;
+    grid-template-rows: [row1] 20% [row2] 20% [row3] 20% [row4] 20% [row5]  auto [row-end] auto;
+    grid-template-columns: [start] 2% [line1] 37.5% [start-small] 8% [line3] 2.5% [line4] 2.5% [line5] 8% [end-small] 37.5% [end-big] 2%;  
+    grid-template-areas: 
+    "head head head head head head head head"
+    "service1 service1 service1 service1 service1 service1 service1 service1"
+    "service2 service2 service2 service2 service2 service2 service2 service2"
+    ". service3 service3 service3 service3 service3 service3 .";                      
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-rows: [row1] auto [row2] auto;
+    grid-template-columns: [start] 2% [line1] 37.5% [start-small] 8% [line3] 2.5% [line4] 2.5% [line5] 8% [end-small] 37.5% [end-big] 2% [end];    
+    background: #EDFAFD;               
+}
+
+/* header */
+
+.head {
+    grid-area: head;
+    grid-column: 1 / end;
+    grid-row: 1 / row2;
+    height: 100vh;
+    padding-top: 7%;
+    /* background: linear-gradient(to bottom right, #5959C3, #95E2EA); */
+    background: transparent;
+    position: relative;
+}
+
+.headerText{
+    grid-column: 2 / end-big;
+    text-align: center;
+    font-size: 0.13em;
+    color: black;
+    /* font-weight: bold; */
+    /* padding-top: 7%; */
+}
+
+.buttonStyle{
+    padding: 0.5em 3em;
+    background: transparent;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:100;
+    text-align:center;
+    transition: all 0.15s;
+    font-family: 'Metrophobic', sans-serif;
+    align-self: start;
+    color: black;
+    border: 0.13em solid black;
+}
+
+/* end header */
+
+/* service 1 */
+
+.service1{ 
+    grid-area: service1;
+    grid-column: 1 / end;
+    grid-row: 2/ row3;
+    background: #EDFAFD;
+    height: 100vh;
+}
+
+.headerSection {
+    grid-column: 2 / end-big;
+    font-size: 0.2em;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.bodySection {
+    grid-column: 2 / end-big;
+    font-size: 0.1em;
+    line-height: 30px;
+}
+
+.darkText {
+    color: #3DDAD7;
+}
+
+.designGif {
+    width: 50%;
+    height: auto;
+}
+
+/* end service 1 */
+
+/* service 2 */
+
+.service2{ 
+    grid-area: service2;
+    grid-column: 1 / end;
+    grid-row: 3/ row4;
+    background: #AED9DA;
+    height: 100vh;
+}
+
+
+.mediumText {
+    color:#2A93D5;
+}
+
+.developmentGif {
+    width: 32%;
+    height: auto;
+}
+
+/* end service 2 */
+
+/* service 3 */
+
+.service3{ 
+    grid-area: service3;
+    grid-column: 1 / end;
+    grid-row: 4/ row5;
+    background: #3DDAD7;
+    height: 100vh;
+}
+
+
+.lightText {
+    color: #EDFAFD;
+}
+
+.marketingGif {
+    width: 35%;
+    height: auto;
+}
+
+/* end service 3 */
+
+.modalFont {
+    font-size: 15px;
+    text-align: left;
+}
+
+.contactForm {
+    text-align: center;
+    font-size: 0.1em;
+}
+
+.contact {
+    grid-column: 2 / end;
+    grid-row: 1 / 1;
+    /* color: white; */  
+    padding-top: 5%;
+}
+
+.contactBtn {
+    grid-column: 2 / end;
+    grid-row: 2;
+    align-self: center;
+    margin-top: -5%;
+}
+
+input {
+    border: 1px solid black;
+    width: 50%;
+    margin-top: 2%;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+textarea {
+    width: 50%;
+    border: 1px solid black;
+}
+
+.buttonStyle2 {
+    padding: 0.5em 3em;
+    background: transparent;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:100;
+    text-align:center;
+    transition: all 0.15s;
+    font-family: 'Metrophobic', sans-serif;
+    align-self: start;
+    color: black;
+    border: 0.13em solid black;
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    z-index: -100;
+    width: 100%;
+}
+
+#s-text {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* start . nav*/
+.vNav {
+    position: fixed;
+    top: 20%;
+    left: 85%;
+    width: 50px;
+    z-index: 9999;
+    list-style-type: none;
+}
+
+.vNav ul {
+    position: relative;
+    padding: 3px;
+    padding-left: 35%;
+}
+
+.vNav ul li{
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 35%;
+    color: rgb(113,135,133);
+}
+
+.vNav a{
+    display: block;
+    width: 15px;
+    height: 15px;
+    text-indent: -9999px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: rgb(113,135,133);
+    text-decoration: none;
+}
+
+.vNav a:hover{
+    border-radius: 50%;
+    background-color: rgb(113,135,133);
+    text-decoration: none;
+}
+
+.vNav a.active{
+    border-radius: 50%;
+    background-color: rgb(207,219,218);
+    text-decoration: none;
+}
+
+.label {
+    position: relative;
+    top: -60%;
+    left: -200%;
+    width: 100%;
+    text-align: right;
+    font-size: 1em;
+    color: rgb(113,135,133);
+    display: none;
+}
+
+
+#section01 {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 30px;
+    width: 420px;
+}
+
+#section02 {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    height: 50px;
+    width: 420px;
+}
+
+#section03 {
+    position: absolute;
+    top: 140%;
+    left: 0;
+    height:50px;
+    width: 420px;
+}
+
+#section04 {
+    position: absolute;
+    top: 210%;
+    left: 0;
+    height: 50px;
+    width: 420px;
+}
+/* end . nav*/
+
+
+
+
+
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+
+    .head {
+        padding-top: 3%;
+    }
+
+    .headerSection {
+        padding-top: 5%;
+        padding-bottom: 3%;
+    }
+
+    .designGif {
+        width: 90%;
+        height: auto;
+    }
+
+    .developmentGif {
+        width: 70%;
+        height: auto;
+    }
+
+    .marketingGif {
+        width: 70%;
+        height: auto;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .contactBtn {
+        margin-top: -15%;
+    }
+
+    .contact {
+        padding-top: 15% !important;
+    }
+
+
+    
+
+  }
+
